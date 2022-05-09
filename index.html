@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="FR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>AuthentificationJS</title>
+</head>
+
+<body>
+
+    <div class="cont-btns">
+        <button class="btn-inscription">S'inscrire</button>
+        <button class="btn-connection">Se connecter</button>
+        <button class="btn-deco">Se déconnecter</button>
+    </div>
+    <h1>
+        Bienvenue, inscrivez-vous et rejoignez Dedsec !
+        <br>
+        Ou restez en public et subissez la matrice de plein fouet !
+    </h1>
+    <p class="info">Contenu public asseptisé et contrôlé, svp merci de ne pas marcher sur la pelouse et surtout restez bien docile.</p>
+
+    <form class="form-inscription">
+
+        <h2>Inscription</h2>
+        <label for="emailInscription">Entrez un email</label>
+        <input type="email" class="email-inscription" id="emailInscription">
+
+        <label for="mdpInscription">Entrez un mdp</label>
+        <input type="password" class="mdp-inscription" id="mdpInscription">
+
+        <button type="submit">S'inscrire</button>
+    </form>
+
+    <form class="form-connection">
+
+        <h2>Connection</h2>
+        <label for="emailConnection">Entrez un email</label>
+        <input type="email" class="email-connection" id="emailConnection">
+
+        <label for="mdpConnection">Entrez un mdp</label>
+        <input type="password" class="mdp-connection" id="mdpConnection">
+
+        <button type="submit">Se connecter</button>
+    </form>
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyAG30sJtN0xgR9jIXmpl5eNZRONv6oFAus",
+            authDomain: "authentification-1638d.firebaseapp.com",
+            projectId: "authentification-1638d",
+            storageBucket: "authentification-1638d.appspot.com",
+            messagingSenderId: "646301733922",
+            appId: "1:646301733922:web:03d477ae233886048ae67b"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+    </script>
+    <script src="main.js"></script>
+</body>
+
+</html>
